@@ -1,3 +1,7 @@
+// Do, Hoai Chinh
+// Assignment 1: Data Types and Operations in JavaScript
+// COP 2801
+
 // Part 1
 // Task 1.1
 
