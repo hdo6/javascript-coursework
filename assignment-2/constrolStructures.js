@@ -203,4 +203,136 @@ for (let i = 0; i < numbers.length; i++)
 console.log("Total: " + total);
 
 
+// Part 3: Improve the Code 
+
+ 
+
+ 
+
+// var x = 85; 
+
+// var g = ""; 
+
+
+// if (x >= 90) 
+
+// { 
+
+// g = "A"; 
+
+// } else 
+
+// { 
+
+// if (x >= 80) 
+
+// { 
+
+// g = "B"; 
+
+// } else 
+
+// { 
+
+// if (x >= 70) 
+
+// { 
+
+// g = "C"; 
+
+// } else 
+
+// { 
+
+// if (x >= 60) 
+
+// { 
+
+// g = "D"; 
+
+// } else 
+
+// { 
+
+// g = "F"; 
+
+// } 
+
+// } 
+
+// } 
+
+// } 
+
+ 
+
+// console.log(g); 
+
+ 
+
+ 
+
+// improved code 
+
+const scored = 85; 
+
+let grade = ""; 
+
+ 
+
+if (scored >= 90) 
+
+{ 
+
+grade = "A"; 
+
+} else if (scored >= 80) 
+
+{ 
+
+grade = "B"; 
+
+} else if (scored >= 70) 
+
+{ 
+
+grade = "C"; 
+
+} else if (scored >= 60) 
+
+{ 
+
+grade = "D"; 
+
+} else 
+
+{ 
+
+grade = "F"; 
+
+} 
+
+ 
+
+console.log(grade); // Output: B 
+
+ 
+
+// 1. Renamed x to scored - Makes it clear this variable represents the student's test score, improving readability 
+
+ 
+
+// 2. Renamed g to grade - Clearly indicates this variable stores the letter grade, making the code self-documenting 
+
+ 
+
+// 3. Used const for score - The score doesn't change, so const prevents accidental reassignment and signals intent 
+
+ 
+
+// Used let for grade - The grade is assigned later, so let is appropriate for variables that will be modified 
+
+ 
+
+// 5. Replaced nested if-else with else if - Eliminates unnecessary nesting, making the code flatter, cleaner, and easier to read and maintain 
 
