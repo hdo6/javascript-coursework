@@ -205,9 +205,9 @@ console.log("Total: " + total);
 
 // Part 3: Improve the Code 
 
- 
 
- 
+
+
 
 // var x = 85; 
 
@@ -264,75 +264,197 @@ console.log("Total: " + total);
 
 // } 
 
- 
+
 
 // console.log(g); 
 
- 
 
- 
+
+
 
 // improved code 
 
-const scored = 85; 
+const scored = 85;
 
-let grade = ""; 
+let grade = "";
 
- 
 
-if (scored >= 90) 
 
-{ 
+if (scored >= 90)
+{
 
-grade = "A"; 
+    grade = "A";
 
-} else if (scored >= 80) 
+} else if (scored >= 80)
+{
 
-{ 
+    grade = "B";
 
-grade = "B"; 
+} else if (scored >= 70)
+{
 
-} else if (scored >= 70) 
+    grade = "C";
 
-{ 
+} else if (scored >= 60)
+{
 
-grade = "C"; 
+    grade = "D";
 
-} else if (scored >= 60) 
+} else
+{
 
-{ 
+    grade = "F";
 
-grade = "D"; 
+}
 
-} else 
 
-{ 
-
-grade = "F"; 
-
-} 
-
- 
 
 console.log(grade); // Output: B 
 
- 
+
 
 // 1. Renamed x to scored - Makes it clear this variable represents the student's test score, improving readability 
 
- 
+
 
 // 2. Renamed g to grade - Clearly indicates this variable stores the letter grade, making the code self-documenting 
 
- 
+
 
 // 3. Used const for score - The score doesn't change, so const prevents accidental reassignment and signals intent 
 
- 
+
 
 // Used let for grade - The grade is assigned later, so let is appropriate for variables that will be modified 
 
- 
+
 
 // 5. Replaced nested if-else with else if - Eliminates unnecessary nesting, making the code flatter, cleaner, and easier to read and maintain 
+
+
+// Part 4: 
+
+//Problem 1: Is It Positive, Negative, or Zero? 
+
+// Write code that checks a number and prints whether it's positive, negative, or zero. 
+
+
+let num = 5; // Test with different values: 5, -3, 0 
+
+
+// Write an if/else if/else statement that: 
+
+// - Prints "positive" if num is greater than 0 
+
+// - Prints "negative" if num is less than 0 
+
+// - Prints "zero" if num equals 0 
+
+// Your code here: 
+
+
+
+if (num > 0)
+{
+
+    console.log("positive");
+
+} else if (num < 0)
+{
+
+    console.log("negative");
+
+} else
+{
+
+    console.log("zero");
+
+}
+
+
+
+
+
+
+// Problem 2: Add Only Positive Numbers 
+
+//Write code that loops through an array and adds up only the positive numbers. 
+
+
+
+let numbers_4 = [1, -2, 3, -4, 5];
+
+let total_4 = 0;
+
+
+
+// Use a loop to go through each number in the array 
+
+// If the number is positive (greater than 0), add it to total 
+
+// Skip negative numbers and zero 
+
+// Your code here: 
+
+
+
+for (let i = 0; i < numbers_4.length; i++)
+{
+
+    // Check if the number is positive 
+
+    if (numbers
+    [i] > 0)
+    {
+
+        total_4 += numbers_4[i];
+
+    }
+
+}
+
+
+// Print the total 
+
+// Expected output: 9 (because 1 + 3 + 5 = 9) 
+
+console.log("Total of positive numbers: " + total_4);
+
+
+
+
+// Problem 3: Print a Multiplication Table 
+
+// Write code that prints the multiplication table for a given number (1 through 10). 
+
+
+let numb_4 = 3;
+
+
+// Use a for loop that counts from 1 to 10 
+
+// Each time through the loop, print: num x counter = result 
+
+// For example, if num is 3: 
+
+// 3 x 1 = 3 
+
+// 3 x 2 = 6 
+
+// 3 x 3 = 9 
+
+// ... and so on up to 3 x 10 = 30 
+
+// Your code here: 
+
+
+
+for (let i = 1; i <= 10; i++)
+{
+
+    console.log(numb_4 + " x " + i + " = " + (numb_4 * i));
+
+}
+
+// After it works, change num to a different value and run again 
 
