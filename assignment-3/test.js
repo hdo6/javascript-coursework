@@ -188,3 +188,65 @@ console.log(activeUserNames);
 //Offered a functional programming alternative: The filter() and map() approach is more declarative, reduces manual loop management, and clearly expresses the intent: "filter users who are active, then map them to their names." This is often considered more readable and professional in modern JavaScript.
 
 //Removed unnecessary == true comparison (in second version): Since isActive is already a boolean, user.isActive alone works as the filter condition, making the code even cleaner.
+
+
+
+//Part 4: Write Your Own Code (25 points)
+
+
+//Problem 1: Is It Positive, Negative, or Zero?
+// Test with different values: 5, -3, 0
+let num_4 = 5;
+
+// Write an if/else if/else statement that:
+// - Prints "positive" if num is greater than 0
+// - Prints "negative" if num is less than 0
+// - Prints "zero" if num equals 0
+
+if (num_4 > 0)
+{
+    console.log("positive");
+} else if (num_4 < 0)
+{
+    console.log("negative");
+} else
+{
+    console.log("zero");
+}
+
+// Problem 2: Add Only Positive Numbers
+
+let numbers = [1, -2, 3, -4, 5];
+let total_4 = 0;
+
+// Use a loop to go through each number in the array
+// If the number is positive (greater than 0), add it to total
+// Skip negative numbers and zero
+
+for (let i = 0; i < numbers.length; i++)
+{
+    if (numbers[i] > 0)
+    {
+        total_4 = total_4 + numbers[i];
+    }
+}
+
+// Expected output: 9 (because 1 + 3 + 5 = 9)
+console.log("Total of positive numbers: " + total_4);
+
+
+// Problem 3: Print a Multiplication Table
+let num = 3;
+
+// Use a for loop that counts from 1 to 10
+// Each time through the loop, print: num x counter = result
+// For example, if num is 3:
+// 3 x 1 = 3
+// 3 x 2 = 6
+// ... up to 3 x 10 = 30
+
+for (let i = 1; i <= 10; i++)
+{
+    let result = num * i;
+    console.log(num + " x " + i + " = " + result);
+}
