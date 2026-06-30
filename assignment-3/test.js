@@ -147,3 +147,44 @@ if (!found)
 {
     console.log("Not found");
 }
+
+
+
+// Part 3: Improve the Code (25 points)
+
+// Array of user objects containing user details
+const students = [
+    { name: "Alice", email: "alice@email.com", isActive: true },
+    { name: "Bob", email: "bob@email.com", isActive: false },
+    { name: "Charlie", email: "charlie@email.com", isActive: true }
+];
+
+// Create a new array containing only the names of active users
+const activeUserNames = [];
+
+// Loop through each user and collect names of active users
+for (let i = 0; i < students.length; i++)
+{
+    // Strict equality check ensures we only match boolean true values
+    if (students[i].isActive === true)
+    {
+        activeUserNames.push(students[i].name);
+    }
+}
+
+// Output the list of active user names
+console.log(activeUserNames);
+
+
+// What I Changed and Why:
+//Renamed variables for clarity (a → students, x → activeUserNames, n → name, e → email, active → isActive): Makes the code self-documenting and immediately understandable without needing comments to explain what each variable represents.
+
+//Changed var to const and let: const is used for variables that won't be reassigned (users array, activeUserNames), which prevents accidental reassignment and signals intent. let is used for the loop counter since it changes each iteration. This follows modern ES6+ best practices.
+
+//Replaced == with ===: Strict equality (===) prevents type coercion issues. While active === true works fine here, using === is a defensive programming practice that avoids subtle bugs that could arise with truthy/falsy values.
+
+//Added descriptive comments: Comments explain the purpose of each major section, making the code easier to maintain and understand for other developers (or future you).
+
+//Offered a functional programming alternative: The filter() and map() approach is more declarative, reduces manual loop management, and clearly expresses the intent: "filter users who are active, then map them to their names." This is often considered more readable and professional in modern JavaScript.
+
+//Removed unnecessary == true comparison (in second version): Since isActive is already a boolean, user.isActive alone works as the filter condition, making the code even cleaner.
